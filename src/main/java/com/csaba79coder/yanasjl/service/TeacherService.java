@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service
@@ -23,5 +24,9 @@ public class TeacherService {
                     return new NoSuchElementException(message);
                 });
         teacherRepository.delete(teacher);
+    }
+
+    public List<Teacher> renderAllTeachers() {
+        return teacherRepository.findAll();
     }
 }
