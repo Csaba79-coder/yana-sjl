@@ -7,8 +7,9 @@ import com.csaba79coder.yanasjl.persistence.TeacherRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.stereotype.Component;
 
-// @Component
+@Component
 @RequiredArgsConstructor
 public class DataLoader implements ApplicationRunner {
 
@@ -22,6 +23,7 @@ public class DataLoader implements ApplicationRunner {
         student1.setFirstName("Ann");
         student1.setLastName("Samoylova");
         student1.setEmail("test@gmail.com");
+        student1.setHasActiveSemester(true);
         /*Student student2 = new Student("Artem", "Bazilev", "test@gmail.com");
         Student student3 = new Student("Artem", "SecondName2","test@gmail.com");
         Student student4 = new Student("Illia", "SecondName3","test@gmail.com");
@@ -51,6 +53,7 @@ public class DataLoader implements ApplicationRunner {
         teacher1.setFirstName("Yana");
         teacher1.setLastName("Tereshchenko");
         teacher1.setEmail("email");
+        teacher1.setContractor(false);
         /*Teacher teacher2 = new Teacher("Alice", "Kuznetsova", "");
         Teacher teacher3 = new Teacher("SmbElse", "SoLazyToday", "");*/
 
