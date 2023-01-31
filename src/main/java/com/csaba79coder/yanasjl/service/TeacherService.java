@@ -19,7 +19,7 @@ public class TeacherService {
     public void deleteTeacher(Long id) {
         Teacher teacher = teacherRepository.findTeacherById(id)
                 .orElseThrow(() -> {
-                    String message = String.format("Book with id: %s was not found", id);
+                    String message = String.format("Teacher with id: %s was not found", id);
                     log.info(message);
                     return new NoSuchElementException(message);
                 });
